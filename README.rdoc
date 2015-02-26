@@ -1,28 +1,46 @@
-== README
+Setting Up Rspec:
+=================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###1. add this group to your Gemfile:
+    group :development, :test do
+      gem 'rspec-rails'
+    end
+  > bundle
+  > run rails g rspec:install
+  >> run rspec and you should get "No examples found"
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+###2. Adding Capybara
+* in your same :development, :test group in Gemfile add gem "capybara",
+and gem 'lanchy'
+
+> bundle
+
+* in spec/rails_helper.rb, write in require 'rspec/rails', underneath add
+require 'capybara/rails'
+>mkdir spec/features
+>>touch spec/features/events_spec.rb
+* inside above file first line needs to be require 'rails_helper'
+
+## feature test model
+
+    require 'rails_helper'
+
+    feature 'Events' do
+
+      scenario 'User edits an event' do
+        Event.create!(
+          description: 'My aweeesome event'
+        )
+
+        visit root_path
+        expect(page).to have_content('My aweeesome event')
+        click_on 'edit'
+        fill_in 'Description', with: 'My awesome event'
+        click_on 'Update Event'
+
+        expect(page).to have_content('My awesome event')
+        expect(page).to have_no_content('My aweeesome event')
+      end
+
+    end
