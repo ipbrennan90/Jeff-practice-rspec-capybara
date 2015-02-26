@@ -12,7 +12,7 @@ Setting Up Rspec:
 
 ###2. Adding Capybara
 * in your same :development, :test group in Gemfile add gem "capybara",
-and gem 'lanchy'
+and gem 'launchy'
 
 > bundle
 
