@@ -6,7 +6,7 @@ feature 'Events' do
 
     visit root_path
     click_on 'New Event'
-    fill_in 'Event Name', with: 'event name'
+    fill_in 'Event name', with: 'event name'
     fill_in 'Description', with: 'event description'
     fill_in 'Date', with: '2015-03-05'
     click_on 'Create Event'
@@ -16,4 +16,6 @@ feature 'Events' do
     expect(page).to have_content('2015-03-05')
 
   end
+
+
 end
