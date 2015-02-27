@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'capybara'
+  gem 'rspec-rails'vg
   gem 'launchy'
+  gem 'capybara'
 end
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

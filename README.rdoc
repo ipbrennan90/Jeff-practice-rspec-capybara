@@ -6,7 +6,9 @@ Setting Up Rspec:
       gem 'rspec-rails'
     end
   > bundle
-  >>run rails g rspec:install
+
+  >> run rails g rspec:install
+
   >> run rspec and you should get "No examples found"
 
 
