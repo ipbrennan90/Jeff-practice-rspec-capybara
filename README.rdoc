@@ -44,3 +44,22 @@ require 'capybara/rails'
       end
 
     end
+
+## Solutions
+
+  * git checkout solution-0
+
+    * checks out just the rails new app, nothing is added yet
+
+
+  * git checkout solution-1
+
+    * rspec and capybara are installed and working
+
+  * git checkout solution-2
+
+    * feature test for events written and working
+
+  * git checkout solution-3
+
+    *
