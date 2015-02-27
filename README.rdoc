@@ -44,4 +44,3 @@ require 'capybara/rails'
       end
 
     end
-git ch
