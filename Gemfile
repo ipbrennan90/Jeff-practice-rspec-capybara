@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'rspec-rails'vg
+  gem 'rspec-rails'
   gem 'launchy'
   gem 'capybara'
 end
